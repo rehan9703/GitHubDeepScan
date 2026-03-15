@@ -21,17 +21,24 @@ body {
 }
 
 /* Custom scrollbar for vaporwave feel */
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-vapor-bg);
+  border-left: 2px solid var(--color-vapor-blue);
 }
 ::-webkit-scrollbar-thumb {
-  background: #FF6AD5;
+  background: var(--color-vapor-pink);
+  border: 2px solid var(--color-vapor-bg);
+  box-shadow: 4px 4px 0px var(--color-vapor-blue);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94D0FF;
+  background: var(--color-vapor-blue);
 }
 
 /* Custom vaporwave prose styles */
