@@ -1,99 +1,143 @@
-# 🌌 GitHubScope
+<div align="center">
+  <img src="./public/assets/banner.png" alt="GitHubScope Banner" width="100%" style="border-radius: 12px; border: 4px solid #FF6AD5; box-shadow: 12px 12px 0px #94D0FF;" />
+  
+  <br />
+  <br />
 
-A retro-futuristic, vaporwave-themed GitHub profile analyzer built with React, Tailwind CSS, and Framer Motion. This application fetches data from the GitHub API and presents it in a highly stylized, interactive dashboard.
+  <h1>🌌 GitHubScope 🌌</h1>
+  
+  <p>
+    <b>The ultimate retro-futuristic deep-dive into any GitHub profile.</b>
+  </p>
 
-## ✨ Features
+  <p>
+    <img src="https://img.shields.io/badge/version-1.1.0-blue?style=for-the-badge&color=FF6AD5" alt="Version" />
+    <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge&color=94D0FF" alt="Build" />
+    <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge&color=C774E8" alt="License" />
+    <img src="https://img.shields.io/badge/PRs-welcome-orange?style=for-the-badge&color=AD8CFF" alt="PRs Welcome" />
+  </p>
+</div>
 
-- **Profile Rating**: Calculates a unique "Vaporwave Tier" (e.g., CYBERSPACE DEITY, SYNTHWAVE HACKER) based on your GitHub activity, followers, and repository metrics.
-- **Coding Stats**: Visualizes your most-used programming languages using a custom-styled pie chart.
-- **Contribution History**: Displays a timeline of your recent GitHub events (pushes, pull requests, issues).
-- **Repository Info**: Showcases your repositories with details like stars, forks, and languages. Includes a "Read More" toggle for long descriptions and an expandable view to see recent commits and README contents.
-- **Responsive Design**: Fully optimized for both desktop and mobile viewing.
-- **Error Boundaries**: Gracefully handles API failures or rendering errors with custom vaporwave-themed error screens.
+---
 
-## 🛠️ Tech Stack
+## 🚀 Overview
 
-- **Frontend**: React 18, Vite
-- **Styling**: Tailwind CSS (with custom vaporwave theme)
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Charts**: Recharts
-- **Markdown**: React Markdown (with GFM support)
+**GitHubScope** is a high-performance, aesthetically stunning web application that allows users to perform deep-scans on any GitHub profile. It goes beyond simple statistics, providing a comprehensive analysis of coding languages, contribution history, and a proprietary **Profile Tier Rating** based on advanced metadata.
 
-## 🚀 Getting Started (Local Development)
+With a vibrant **Vaporwave / Synthwave** design, GitHubScope turns raw data into a premium visual experience.
 
-1. **Clone the repository**
+---
+
+## ✨ Key Features
+
+- **🔍 Smart Search:** Instantly fetch and analyze GitHub users.
+- **🏆 Profile Rating System:** A multi-dimensional algorithm that tiers profiles from 'D' to 'S+'.
+- **📊 Language Visualization:** Interactive distribution charts of coding languages used.
+- **📅 Activity Timeline:** Detailed contribution history and recent commit analysis.
+- **📂 Repo Inspector:** Deep exploration of repositories, including README rendering and star/fork metrics.
+- **🌙 High-End Aesthetic:** Premium dark-mode UI with motion-rich transitions and glassmorphism.
+- **🤖 Intelligent Mocking:** Automatic fallback to simulated data when API rate limits are hit.
+
+---
+
+## 🏗️ Technical Architecture
+
+GitHubScope is built with a modern, reactive stack designed for speed and visual excellence.
+
+### System Workflow
+
+```mermaid
+graph TD;
+    A[User Input] --> B[App Component]
+    B --> C{API Rate Limit Check}
+    C -->|Within Limit| D[GitHub API Service]
+    C -->|Limit Exceeded| E[Data Simulation Engine]
+    D --> F[Data Processing Layer]
+    E --> F
+    F --> G[Profile Rating Algorithm]
+    F --> H[Component Rendering]
+    G --> H
+    H --> I[Dynamic Dashboard]
+    
+    style A fill:#FF6AD5,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#94D0FF,stroke:#333,stroke-width:2px,color:#000
+    style G fill:#C774E8,stroke:#333,stroke-width:2px,color:#fff
+    style I fill:#4ade80,stroke:#333,stroke-width:2px,color:#000
+```
+
+### Core Technologies
+
+- **React 18 + Vite:** Super-fast development and optimized build pipelines.
+- **TypeScript:** Robust type-safety across the entire data fetching and processing layer.
+- **Tailwind CSS:** Custom vaporwave utility tokens and retro-futuristic styling.
+- **Motion (Framer Motion):** Silky smooth entrance animations and state transitions.
+- **Lucide React:** Sleek, consistent iconography.
+
+---
+
+## 🧠 Core Concepts & Algorithms
+
+### The Profile Rating Algorithm
+
+The heart of GitHubScope is the `calculateProfileRating` function, which evaluates profiles based on six key metrics:
+
+1.  **Biography Quality:** Analyzes the depth and descriptiveness of the user bio.
+2.  **User Popularity:** Calculates a weighted score based on followers and average repository stars.
+3.  **Repository Popularity:** Evaluates the impact of projects through stars and forks.
+4.  **Metadata Completeness:** Rewards profiles with descriptions, locations, and website links.
+5.  **Documentation (Webpages & Docs):** Checks for external links and documentation associated with repos.
+6.  **Backlinks & Information:** Validates the completeness of profile identity (Company, Blog, Location).
+
+#### Final Tier Tiers:
+- **S+ (Cyber Deity):** Score 90+
+- **S (Neon Legend):** Score 80-89
+- **A (Synthwave Hacker):** Score 70-79
+- **B (Retro Coder):** Score 50-69
+- **C (Digital Explorer):** Score 30-49
+
+---
+
+## 🛠️ Performance & Scalability
+
+GitHubScope is designed with performance in mind:
+- **Skeleton Loading:** Ensures a perceivably fast experience even while fetching heavy API data.
+- **Efficient Processing:** Heavy data processing (filtering, sorting, calculating scores) is done efficiently on the client-side.
+- **Rate Limit Handling:** Robust error boundaries and fallback mechanisms prevent application crashes.
+
+---
+
+## 💻 Local Development
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+
+### Setup
+1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/rehan9703/GitHubDeepScan.git
    ```
-
-2. **Install dependencies**
+2. Install dependencies:
    ```bash
    npm install
    ```
-
-3. **Set up Environment Variables**
-   Create a `.env` file in the root directory and add your GitHub Personal Access Token to avoid API rate limits:
+3. Create a `.env` file and add your GitHub Token (Optional but recommended for higher rate limits):
    ```env
-   VITE_GITHUB_TOKEN=your_github_personal_access_token_here
+   VITE_GITHUB_TOKEN=your_token_here
    ```
-   *Note: Generate a classic token with `public_repo` and `read:user` scopes from your GitHub Developer Settings.*
-
-4. **Start the development server**
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-5. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-## 🌍 Deployment Guides
-
-This project is configured as a pure Single Page Application (SPA) and is ready to be deployed on any major static hosting platform.
-
-### ▲ Vercel
-Vercel is the easiest way to deploy this app. A `vercel.json` file is already included to handle SPA routing.
-1. Push your code to a GitHub repository.
-2. Go to [Vercel](https://vercel.com/) and import your repository.
-3. Vercel will automatically detect Vite and configure the build settings (`npm run build`, output directory: `dist`).
-4. **Important**: Go to the "Environment Variables" section in your Vercel project settings and add `VITE_GITHUB_TOKEN` with your GitHub PAT.
-5. Click **Deploy**.
-
-### 💠 Netlify
-A `netlify.toml` file is included to handle build commands and SPA routing redirects.
-1. Push your code to a GitHub repository.
-2. Go to [Netlify](https://www.netlify.com/) and import your repository.
-3. The build settings will be automatically picked up from `netlify.toml`.
-4. **Important**: Go to "Site settings" > "Environment variables" and add `VITE_GITHUB_TOKEN`.
-5. Click **Deploy Site**.
-
-### 🚂 Railway
-1. Push your code to GitHub.
-2. Go to [Railway](https://railway.app/) and create a new project from your GitHub repo.
-3. Railway will detect the Node.js environment.
-4. Go to the "Variables" tab and add `VITE_GITHUB_TOKEN`.
-5. Railway will run `npm run build` and `npm start` (which uses the included Express server to serve the static files).
-
-### ☁️ Render
-1. Push your code to GitHub.
-2. Go to [Render](https://render.com/) and create a new "Web Service".
-3. Connect your repository.
-4. Set the Build Command to `npm install && npm run build`.
-5. Set the Start Command to `npm start`.
-6. Add `VITE_GITHUB_TOKEN` in the "Environment" tab.
-7. Click **Create Web Service**.
-
-## 🔒 API Rate Limits & `VITE_GITHUB_TOKEN`
-
-By default, the GitHub API limits unauthenticated requests to 60 per hour. If you exceed this limit, the app will automatically fall back to "Simulation Mode" and generate mock data.
-
-To unlock **5,000 requests per hour**, you must provide a GitHub Personal Access Token via the `VITE_GITHUB_TOKEN` environment variable. 
-- Since this token is exposed to the client (Vite prefix), **DO NOT** use a token with write access or access to private repositories. 
-- Create a fine-grained token with **Read-only** access to public data, or a classic token with no scopes selected (which grants read-only access to public information).
+---
 
 ## 📄 License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+---
+
+<div align="center">
+  <i>Built with 💖 and 🦾 by Antigravity for GitHubDeepScan</i>
+</div>
