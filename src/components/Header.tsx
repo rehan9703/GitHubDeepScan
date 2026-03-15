@@ -25,11 +25,28 @@ export default function Header({ onSearch, isLoading }: HeaderProps) {
         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         className="flex items-center space-x-3"
       >
-        <Github className="w-12 h-12 text-vapor-pink drop-shadow-[2px_2px_0px_#94D0FF]" />
-        <h1 className="text-5xl md:text-6xl font-bold tracking-widest text-vapor-pink drop-shadow-[3px_3px_0px_#94D0FF] uppercase">
-          GitHubScope
-        </h1>
+        <a 
+          href="https://github.com/rehan9703/GitHubDeepScan" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group flex items-center space-x-3"
+        >
+          <Github className="w-12 h-12 text-vapor-pink drop-shadow-[2px_2px_0px_#94D0FF] group-hover:scale-110 transition-transform" />
+          <h1 className="text-5xl md:text-6xl font-bold tracking-widest text-vapor-pink drop-shadow-[3px_3px_0px_#94D0FF] uppercase">
+            GitHubScope
+          </h1>
+        </a>
       </motion.div>
+
+      <a 
+        href="https://github.com/rehan9703/GitHubDeepScan" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 text-vapor-blue hover:text-vapor-pink transition-colors font-bold uppercase tracking-widest text-sm bg-white/10 px-4 py-1 border border-vapor-blue shadow-[2px_2px_0px_#FF6AD5] active:translate-x-0.5 active:translate-y-0.5"
+      >
+        <Github className="w-4 h-4" />
+        <span>View Source Code</span>
+      </a>
 
       <motion.form
         initial={{ scale: 0.9, opacity: 0 }}
