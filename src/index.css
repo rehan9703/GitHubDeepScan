@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-vapor-pink: #FF6AD5;
+  --color-vapor-blue: #94D0FF;
+  --color-vapor-bg: #FFFFFF;
+  --color-vapor-text: #000000;
+  --font-vapor: "VT323", monospace;
+}
+
+body {
+  font-family: var(--font-vapor);
+  background-color: var(--color-vapor-bg);
+  color: var(--color-vapor-text);
+  background-image: 
+    linear-gradient(to right, rgba(148, 208, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 208, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for vaporwave feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6AD5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94D0FF;
+}
+
+/* Custom vaporwave prose styles */
+.prose-vapor {
+  --tw-prose-body: var(--color-vapor-text);
+  --tw-prose-headings: var(--color-vapor-pink);
+  --tw-prose-links: var(--color-vapor-blue);
+  --tw-prose-bold: var(--color-vapor-text);
+  --tw-prose-counters: var(--color-vapor-pink);
+  --tw-prose-bullets: var(--color-vapor-pink);
+  --tw-prose-hr: var(--color-vapor-blue);
+  --tw-prose-quotes: var(--color-vapor-text);
+  --tw-prose-quote-borders: var(--color-vapor-pink);
+  --tw-prose-captions: var(--color-vapor-text);
+  --tw-prose-code: var(--color-vapor-pink);
+  --tw-prose-pre-code: var(--color-vapor-bg);
+  --tw-prose-pre-bg: var(--color-vapor-text);
+  --tw-prose-th-borders: var(--color-vapor-blue);
+  --tw-prose-td-borders: var(--color-vapor-blue);
+}
+
+.prose-vapor a {
+  text-decoration-color: var(--color-vapor-pink);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.prose-vapor a:hover {
+  color: var(--color-vapor-pink);
+  text-decoration-color: var(--color-vapor-blue);
+}
+
+.prose-vapor img {
+  border: 4px solid var(--color-vapor-pink);
+  box-shadow: 4px 4px 0px var(--color-vapor-blue);
+}

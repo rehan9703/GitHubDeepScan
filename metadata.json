@@ -1,0 +1,5 @@
+{
+  "name": "GitHubScope",
+  "description": "A vaporwave-inspired web application that visualizes a GitHub user's profile, coding statistics, and repository information.",
+  "requestFramePermissions": []
+}
